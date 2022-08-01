@@ -248,7 +248,7 @@ for i_episode in range(num_episodes):
     for t in count():
         # Select and perform an action
         action = select_action(state)
-        _, reward, done, _ = env.step(action.item())
+        _, reward, done, _, _ = env.step(action.item())
         reward = torch.tensor([reward], device=device)
 
         # Observe new state
